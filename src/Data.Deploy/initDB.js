@@ -12,7 +12,7 @@ class DBInitializer {
       fs.mkdirSync(scriptsRoot, { recursive: true });
     }
 
-    const dbPath = settings.dbPath;
+   // const dbPath = settings.dbPath;
     const db = new SqliteDatabase(dbPath);
     db.open();
 
@@ -63,9 +63,10 @@ class DBInitializer {
         )`
       );
     } finally {
-      db.close();
+      db.close(); //db close
     }
   }
 }
 
 module.exports = { DBInitializer };
+//module.exports = { DBInitializer };
